@@ -1,56 +1,78 @@
 # Lock or unlock annotations in PDF [Xamarin]
-This repo contains the example which demonstrates how to lock or unlock annotations dynamically using Syncfusion&reg; Xamarin.Forms PDF Viewer. It explains how annotation interaction can be controlled at runtime to meet real‑world application requirements such as secure document viewing, review workflows, and role‑based access.
-The sample focuses on controlling existing annotations within a loaded PDF document without requiring the document to be reloaded or recreated.
+
+This repository contains an example that demonstrates how to lock or unlock annotations dynamically using the Syncfusion® Xamarin.Forms PDF Viewer. It explains how annotation interaction can be controlled at runtime to support scenarios such as secure document viewing, review workflows, and role-based access control.
+
+The sample focuses on managing existing annotations within a loaded PDF document without requiring the document to be reloaded or recreated.
 
 ## Overview
-PDF annotations are commonly used for document review, collaboration, and feedback. While annotations improve usability, many applications require restrictions on when and how annotations can be edited.
-This project explains how to manage annotation interaction dynamically by locking and unlocking annotations after the document is loaded. The approach ensures that documents remain interactive while protecting finalized or restricted content.
-The solution is built using Syncfusion Xamarin.Forms PDF Viewer and is intended for mobile applications targeting Android and iOS.
+
+PDF annotations are commonly used for document review, collaboration, and feedback. While annotations enhance usability, many applications require restrictions on when and how annotations can be edited.
+
+This project explains how to dynamically manage annotation interaction by locking and unlocking annotations after the document is loaded. This approach ensures documents remain interactive while protecting finalized or restricted content.
+
+## Supported Platforms
+
+This sample supports the following platforms:
+
+- Android  
+- iOS  
+- UWP (Universal Windows Platform)
+
+The annotation locking behavior is implemented consistently across all supported platforms.
 
 ## Key Features
-The solution supports dynamic control of annotation behavior at runtime. All annotations present in the document can be locked or unlocked based on application logic.
-The locking behavior takes effect immediately without reloading the PDF document. This ensures a smooth and responsive user experience.
-The design is flexible and can be extended to apply restrictions based on annotation type, user role, or workflow state.
+
+The sample demonstrates dynamic control of annotation behavior at runtime:
+
+- Locking and unlocking all annotations without reloading the document  
+- Immediate enforcement of annotation restrictions  
+- Flexible design that can be extended based on workflows or application logic  
+- Support for advanced scenarios such as role-based or state-based restrictions  
 
 ## Prerequisites
-To use this sample, a Xamarin.Forms development environment must be set up in Visual Studio. Platform‑specific tools such as the Android SDK or Xcode are required depending on the target platform.
-A valid Syncfusion license is required, and a free community license is available for eligible developers.
 
-### Understanding PDF Annotations
-Annotations are interactive objects added to PDF documents to convey information. Common annotation types include text markups, ink drawings, shapes, free‑text notes, and stamps.
-Each annotation contains metadata that defines its appearance and behavior. One key property is the lock state, which determines whether the annotation can be edited by the user.
+Before running this sample, ensure the following are available:
 
-### Meaning of Locking an Annotation
-Locking an annotation prevents users from modifying it. When locked, an annotation cannot be moved, resized, edited, or deleted.
-This behavior is essential in scenarios where annotations represent finalized remarks, approvals, or protected feedback.
+- Visual Studio with Xamarin.Forms development support  
+- Android SDK, Xcode, or UWP tooling depending on the target platform  
+- A valid Syncfusion license (community license available for eligible users)  
 
-### Locking Annotations
-All annotations within a document can be locked simultaneously to ensure complete read‑only behavior. This is useful for finalized documents, signed files, or audit records where changes must be prevented.
-Locking can be applied immediately after the document finishes loading, ensuring users never interact with annotations in an unintended state.
+## Understanding PDF Annotations
 
-### Unlocking Annotations
-Annotations can be unlocked dynamically to allow editing when required. This enables workflows where documents transition between editable and read‑only states based on business rules or user actions.
-Unlocking does not require the document to be reloaded and takes effect immediately.
+Annotations are interactive elements added to PDF documents for communication and feedback. Common annotation types include text markups, ink drawings, shapes, free-text notes, and stamps.
 
-### Selective Annotation Locking
-Instead of locking all annotations, specific annotation types can be restricted while others remain editable. This allows advanced control scenarios, such as keeping comments editable while locking highlights or shapes.
-Selective locking ensures flexibility while maintaining document control.
+Each annotation includes metadata that controls its appearance and behavior. One important attribute is the lock state, which determines if the annotation can be modified.
 
-### Role‑Based Annotation Control
-Annotation locking can be integrated with user roles. For example, administrators or reviewers may have permission to edit annotations, while standard users may only view them.
-This approach is suitable for enterprise applications that require permission‑based document interaction.
+## Meaning of Locking an Annotation
 
-### Dynamic Lock State Control
-The lock state of annotations can be toggled dynamically at runtime. This allows applications to provide user interface controls that enable or disable annotation editing without restarting the application or reloading the document.
-Such behavior is useful in review and approval workflows.
+Locking an annotation prevents it from being moved, resized, edited, or deleted. This behavior is essential for protecting finalized remarks, approvals, or restricted feedback.
 
-### Annotation Interaction Handling
-The PDF Viewer raises events when users interact with annotations. These events can be used to detect attempts to edit locked annotations and provide feedback to the user.
-Clear feedback improves usability and helps users understand document restrictions.
+## Locking Annotations
 
-### Conclusion
-This repository demonstrates a practical and flexible approach to managing PDF annotation interaction using the Syncfusion Xamarin.Forms PDF Viewer. By dynamically locking and unlocking annotations, applications can enforce document integrity while still supporting controlled collaboration and review processes.
-The techniques described here integrate seamlessly into real‑world mobile applications and can be adapted to various architectural patterns and workflow requirements. This makes annotation locking an effective solution for balancing usability, security, and control in PDF‑based Xamarin.Forms applications.
+All annotations in a document can be locked at once to enforce a read-only state. This is useful for finalized documents, signed records, or audit files. Locking can be applied immediately after the document loads.
 
-## Blog reference
-[Easily Lock and Unlock Annotations Using Xamarin.Forms PDF Viewer](https://www.syncfusion.com/blogs/post/lock-and-unlock-annotations-using-xamarin-forms-pdf-viewer.aspx)
+## Unlocking Annotations
+
+Annotations can be unlocked dynamically to allow editing when required. This enables workflows where documents transition between editable and non-editable states based on user actions or business rules.
+
+## Selective Annotation Locking
+
+Specific annotation types can be locked while others remain editable. For example, highlights may be locked while comments stay editable. This provides fine-grained control over document interaction.
+
+## Role-Based Annotation Control
+
+Annotation locking can be integrated with user roles. Administrators or reviewers may be allowed to edit annotations, while standard users may only view them. This is ideal for enterprise and compliance-driven applications.
+
+## Dynamic Lock State Control
+
+The lock state of annotations can be toggled at runtime without reloading the document. This allows UI controls to dynamically enable or disable annotation editing during the application lifecycle.
+
+## Annotation Interaction Handling
+
+The PDF Viewer provides events that detect user interaction with annotations. These events can be used to provide feedback when users attempt to edit locked annotations, improving clarity and usability.
+
+## Conclusion
+
+This repository demonstrates a flexible and reliable approach to managing PDF annotation interaction using the Syncfusion Xamarin.Forms PDF Viewer. By dynamically locking and unlocking annotations, applications can maintain document integrity while supporting structured collaboration and review workflows.
+
+For more details, refer to the official Syncfusion [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/xamarin/overview) and [API reference](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.html).
